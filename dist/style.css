@@ -1,0 +1,34 @@
+html{
+    min-height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content{
+    padding: 40px 100px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home, .menu, .content{
+    display: none;
+}
+
+.home.active, .menu.active, .content.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
