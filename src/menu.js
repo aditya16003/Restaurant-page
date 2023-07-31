@@ -1,7 +1,6 @@
 
 
-export function menu(){
-    const content = document.querySelector('.content');
+function create_menu(){
 
     const menu_content = document.createElement('div');
     menu_content.classList.add('menu');
@@ -14,6 +13,7 @@ export function menu(){
         dish_name.classList.add('dish-name');
 
         const dish_img = document.createElement('img');
+        dish_img.classList.add('dish-img');
         dish_img.src = '../src/dish.jpeg';
 
         const dish_desc = document.createElement('p');
@@ -23,14 +23,14 @@ export function menu(){
         dish.appendChild(dish_img);
         dish.appendChild(dish_desc);
         menu_content.appendChild(dish);
-        content.appendChild(menu_content);
     }
+
+    return menu_content;
 }
 
-export function menu_active(){
-    const active = document.querySelector('.active');
-    active.classList.remove('active');
+export default function render_menu(){
+    const main = document.getElementById('main');
+    main.innerText = '';
 
-    const menu_content = document.querySelector('.menu');
-    menu_content.classList.add('active');
+    main.appendChild(create_menu());
 }

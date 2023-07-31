@@ -1,34 +1,68 @@
-html{
-    min-height: 100%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-*{
-    box-sizing: border-box;
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
 }
 body{
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .content{
-    padding: 40px 100px;
+    background-color: honeydew;
+    position: relative;
+    min-height: 100vh;
+}
+
+.header{
+    background-color: rgb(169, 169, 169);
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-option{
+    padding: 2rem;
+    height: 2.5rem;
+    width: 10rem;
     border-radius: 8px;
+    transition: transform 0.3s;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.home, .menu, .content{
-    display: none;
+.nav-option:hover{
+    scale: 1.05;
+    background: rgba(99, 99, 99, 0.4);;
 }
 
-.home.active, .menu.active, .content.active{
+.nav-option.active{
+    background-color: rgba(42, 40, 40, 0.638);
+    color: white;
+}
+
+.home, .menu, .contact{
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: grey;
-    font-size: medium;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    gap: 20px;
 }

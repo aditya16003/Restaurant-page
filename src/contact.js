@@ -1,6 +1,4 @@
-export function contact(){
-
-    const content = document.querySelector('.content');
+function create_contact(){
 
     const contact_details = document.createElement('div');
     contact_details.classList.add('contact');
@@ -16,13 +14,13 @@ export function contact(){
     contact_details.appendChild(contact_num);
     contact_details.appendChild(contact_mail);
 
-    content.appendChild(contact_details);
+    return contact_details;
 }
 
-export function contact_active(){
-    const active = document.createElement('.active');
-    active.classList.remove('active');
 
-    const contact_details = document.querySelector('.contact');
-    contact_details.classList.add('active');
+export default function render_contact(){
+    const main = document.getElementById('main');
+    main.innerText = '';
+
+    main.appendChild(create_contact());
 }

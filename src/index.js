@@ -1,10 +1,7 @@
-import pageLoad from "./page-load";
+import load_page from "./page-load";
 
-console.log("Yo! It's been a while ye!!");
 
-window.onload = () => {
-  pageLoad();
-};
+load_page();
 
 
 

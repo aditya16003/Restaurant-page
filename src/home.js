@@ -1,4 +1,4 @@
-export function home(){
+function create_home(){
 
     const home_content = document.createElement('div');
     home_content.classList.add('home');
@@ -18,14 +18,15 @@ export function home(){
     home_content.appendChild(heading);
     home_content.appendChild(img);
     home_content.appendChild(desc);
-    home_content.classList.add('active');
-    content.appendChild(home_content);
+
+    return home_content;
 }
 
-export function home_active(){
-    const active = document.querySelector('.active');
-    active.classList.remove('active');
 
-    const home_content = document.querySelector('.home');
-    home_content.classList.add('active');
+export default function render_home(){
+    const main = document.getElementById('main');
+    main.innerText = '';
+
+    main.appendChild(create_home());
 }
+
